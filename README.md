@@ -158,7 +158,14 @@ The USB stick is now mounted to /mnt/temp and we can see the contents.
 
 Lets copy rk3328-roc-cc.dtb and get the wifi working.
 
-`sudo cp /mnt/temp/rk3328-roc-cc.dtb /boot/dtb/rockchip` - this will copy the dtb file into the correct location, then we need to reboot, `sudo reboot`
+`sudo cp /mnt/temp/rk3328-roc-cc.dtb /boot/dtb/rockchip` - this will copy the dtb file into the correct location, 
+
+For newer armbian we need to copy the same file under different name (rk3328-mkspi.dtb): 
+
+`sudo cp /mnt/temp/rk3328-roc-cc.dtb /boot/dtb/rockchip/rk3328-mkspi.dtb`
+`sudo cp /mnt/temp/rk3328-roc-cc.dtb /boot/dtb/rk3328-mkspi.dtb`
+
+then we need to reboot, `sudo reboot`
 
 ![reboot after dtb](<images/Screenshot 2024-03-14 233024.png>)
 
